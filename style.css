@@ -1,7 +1,8 @@
 :root {
   --amarelo: #FFD700;
-  --azul-claro: #007BFF; 
+  --azul-claro: #007BFF;
   --cinza-escuro: #333333;
+  --cinza-header: #444; /* Cinza para o header */
   --cinza-texto: #555555;
   --cinza-claro: #f8f9fa;
   --branco: #FFFFFF;
@@ -13,6 +14,46 @@
 html { scroll-behavior: smooth; }
 body { font-family: 'Poppins', sans-serif; color: var(--cinza-texto); background-color: var(--branco); line-height: 1.7; }
 .container { width: 90%; max-width: 1100px; margin: 0 auto; }
+
+/* HEADER (Reintroduzido) */
+.header {
+  background-color: var(--cinza-header);
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-img {
+  height: 40px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.nav a, .nav-button-jogo {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+.nav a:hover, .nav-button-jogo:hover {
+  color: var(--amarelo);
+}
+.nav-button-jogo {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
 
 /* Banner Setembro Amarelo */
 .banner-setembro-amarelo { width: 100%; background-color: var(--amarelo); }
@@ -47,7 +88,7 @@ body { font-family: 'Poppins', sans-serif; color: var(--cinza-texto); background
 .projeto-desc h3 { font-size: 24px; font-weight: 600; color: var(--cinza-escuro); margin-bottom: 15px; }
 .projeto-desc p { font-size: 16px; text-align: justify; }
 
-/* Estilos do Carrossel (Reintroduzidos) */
+/* Estilos do Carrossel */
 .carrossel-wrapper {
   flex: 1;
   max-width: 450px;
@@ -55,7 +96,7 @@ body { font-family: 'Poppins', sans-serif; color: var(--cinza-texto); background
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  aspect-ratio: 16 / 10; /* Proporção da imagem */
+  aspect-ratio: 16 / 10;
 }
 .carrossel {
   display: flex;
@@ -118,6 +159,9 @@ body { font-family: 'Poppins', sans-serif; color: var(--cinza-texto); background
   .projeto-desc p { text-align: center; }
   .footer-container { grid-template-columns: repeat(2, 1fr); }
   .footer-logo-social { grid-column: 1 / -1; text-align: center; }
+}
+@media (max-width: 768px) {
+  .nav { display: none; } /* Esconde o menu em telas menores para futuro menu hamburguer */
 }
 @media (max-width: 576px) {
   .section { padding: 60px 15px; }
