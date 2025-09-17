@@ -4,157 +4,166 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TransformAção - Projetos Sociais</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="img/logo.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2e7u1a8t/bI+u0+58l5m5k5w5d5e5/j1w1o5/k1k1c5" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 
-  <header class="header">
-    <div class="container">
-      <a href="#">
-        <img src="img/logo.png" alt="TransformAção" class="logo-img" />
-      </a>
-      <nav class="nav">
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#impacto">Impacto</a>
-        <button id="btnJogo" class="btn-jogo" type="button">Jogar</button>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero-banner">
-    <img src="img/banner2.jpeg" alt="Setembro Amarelo" class="banner-img">
+  <section class="banner-setembro-amarelo">
+    <img src="img/banner-amarelo.png" alt="Setembro Amarelo" class="banner-img">
   </section>
 
-  <section class="hero-content">
-    <div class="container content">
-      <h1 class="hero-title">Transformando a dificuldade em alegria!</h1>
-      <p class="hero-subtitle">Conecte-se a projetos que impactam vidas e fazem a diferença em nossa comunidade.</p>
-      <a href="#voluntario" class="btn-primary">Seja voluntário</a>
+  <section class="section intro">
+    <div class="container">
+      <h1 class="intro-title">Transformando a dificuldade em alegria!</h1>
+      <p class="intro-subtitle">Conecte-se a projetos que impactam vidas e fazem a diferença em nossa comunidade.</p>
+      <a href="#voluntario" class="btn-azul">Seja voluntário</a>
     </div>
   </section>
 
   <section class="section sobre" id="sobre">
-    <h2>Sobre</h2>
-    <div class="subtopicos">
-      <div class="subtopico subtopico-left">
-        <h3>Quem somos?</h3>
-        <p>
-          Somos uma organização não governamental fundada com o intuito de transformar todo tipo de dificuldade
-          em alegria para aqueles que mais precisam e necessitam de momentos felizes.
-        </p>
-        <button onclick="verOrganograma()" class="link-organograma">Ver organograma</button>
+    <div class="container">
+      <h2>SOBRE</h2>
+      <div class="sobre-grid">
+        <div class="sobre-coluna">
+          <h3>QUEM SOMOS?</h3>
+          <p>
+            Somos uma organização não governamental fundada com o intuito de transformar todo tipo de dificuldade
+            em alegria para aqueles que mais precisam e necessitam de momentos felizes.
+          </p>
+        </div>
+        <div class="sobre-coluna">
+          <h3>O QUE FAZEMOS?</h3>
+          <p>
+            Atuamos através de projetos sociais e campanhas para levar um pouco de dignidade para aqueles que mais precisam.
+          </p>
+        </div>
+        <div class="sobre-coluna">
+          <h3>MISSÃO E VALORES</h3>
+          <p>
+            Nossa missão é ajudar quem precisa, fazer a diferença na vida delas, agregando um valor digno.
+            Nossa visão é se tornar referência em solidariedade mantendo sempre nosso compromisso com a igualdade.
+            Nossos valores são: Solidariedade, Igualdade, Inclusão, Empatia.
+          </p>
+        </div>
       </div>
-
-      <div class="subtopico subtopico-right">
-        <h3>Missão, Visão e Valores</h3>
-        <p>
-          Nossa missão é ajudar quem precisa, fazer a diferença na vida delas, agregando um valor digno. <br />
-          Nossa visão é se tornar referência em solidariedade mantendo sempre nosso compromisso com a igualdade. <br />
-          Nossos valores são: Solidariedade, Igualdade, Inclusão, Empatia.
-        </p>
-      </div>
-      
-      <div class="subtopico subtopico-left">
-        <h3>O que fazemos?</h3>
-        <p>
-          Atuamos através de projetos sociais e campanhas para levar um pouco de dignidade para aqueles que mais precisam.
-        </p>
-      </div>
+      <button onclick="verOrganograma()" class="btn-azul organograma-btn">Clique para ver nosso Organograma</button>
     </div>
   </section>
 
   <section class="section projetos" id="projetos">
-    <h2>Projetos</h2>
+    <div class="container">
 
-    <div class="projeto-card">
-      <img src="img/imagem4.png" alt="Maio Laranja">
-      <div class="descricao">
-        <h3>Maio Laranja</h3>
-        <p>
-          Esta campanha foi desenvolvida para conscientizar a todos sobre o maio laranja. Fizemos uma animação e uma atividade com nossas crianças, além de conversar e refletir sobre essa causa.
-        </p>
+      <div class="projeto-item">
+        <div class="carrossel-wrapper">
+          <div class="carrossel">
+            <img src="img/imagem4.png" alt="Imagem 4">
+            <img src="img/imagem1.jpeg" alt="Imagem 1">
+            <img src="img/imagem2.jpeg" alt="Imagem 2">
+            <img src="img/imagem3.jpeg" alt="Imagem 3">
+          </div>
+          <button class="seta esquerda" onclick="moverCarrossel(-1)">&#10094;</button>
+          <button class="seta direita" onclick="moverCarrossel(1)">&#10095;</button>
+        </div>
+        <div class="projeto-desc">
+          <h3>Maio Laranja</h3>
+          <p>
+            Esta campanha foi desenvolvida para conscientizar a todos sobre o maio laranja. Fizemos uma animação e uma atividade com nossas crianças, além de conversar e refletir sobre essa causa.
+          </p>
+        </div>
       </div>
-    </div>
-    
-    <div class="projeto-card reverse">
-      <img src="img/agasalho1.png" alt="Campanha do Agasalho">
-      <div class="descricao">
-        <h3>Campanha do Agasalho</h3>
-        <p>
-          Durante os meses mais frios, arrecadamos agasalhos e cobertores em nossa comunidade para distribuir a pessoas em situação de vulnerabilidade. Foi uma corrente do bem que aqueceu muitos corações.
-        </p>
-      </div>
-    </div>
 
+      <div class="projeto-item reverse">
+        <div class="carrossel-wrapper">
+          <div class="carrossel carrossel2">
+            <img src="img/agasalho1.png" alt="Agasalho 1">
+            <img src="img/agasalho2.jpeg" alt="Agasalho 2">
+            <img src="img/agasalho3.png" alt="Agasalho 3">
+            <img src="img/agasalho4.png" alt="Agasalho 4">
+            <img src="img/agasalho5.png" alt="Agasalho 5">
+          </div>
+          <button class="seta esquerda" onclick="moverCarrossel2(-1)">&#10094;</button>
+          <button class="seta direita" onclick="moverCarrossel2(1)">&#10095;</button>
+        </div>
+        <div class="projeto-desc">
+          <h3>Campanha do Agasalho</h3>
+          <p>
+            Durante os meses mais frios, arrecadamos agasalhos e cobertores em nossa comunidade para distribuir a pessoas em situação de vulnerabilidade. Foi uma corrente do bem que aqueceu muitos corações.
+          </p>
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <section class="section voluntario" id="voluntario">
-    <h2>Seja voluntário</h2>
-    <form id="voluntario-form">
-      <input type="text" name="from_nome" placeholder="Seu nome" required />
-      <input type="tel" name="from_numero" placeholder="Seu número" required />
-      <input type="email" name="from_email" placeholder="Seu e-mail" required />
-      <button type="submit">Enviar</button>
-    </form>
+    <div class="container">
+      <h2>SEJA VOLUNTÁRIO!</h2>
+      <form id="voluntario-form">
+        <input type="text" name="from_nome" placeholder="Nome" required />
+        <input type="email" name="from_email" placeholder="E-mail" required />
+        <input type="tel" name="from_numero" placeholder="Número de telefone" required />
+        <button type="submit" class="btn-azul">Enviar</button>
+      </form>
+    </div>
   </section>
 
   <section class="section impacto" id="impacto">
-    <h2>Nosso Impacto</h2>
-    <p>Em breve: números e histórias das nossas ações e projetos realizados!</p>
+    <div class="container">
+      <h2>NOSSO IMPACTO</h2>
+      <p>Em breve: números e histórias das nossas ações e projetos realizados!</p>
+      <button id="btnJogo" class="btn-azul" type="button">JOGUE AQUI!</button>
+    </div>
   </section>
 
   <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-social">
-        <a href="https://instagram.com/ong_transformaacao" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="mailto:turma15686@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    <div class="container footer-container">
+      <div class="footer-coluna footer-logo-social">
+        <img src="img/logo.png" alt="Logo TransformAção" class="footer-logo">
+        <div class="footer-social">
+            <a href="mailto:turma15686@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://instagram.com/ong_transformaacao" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
       </div>
-      <p class="footer-copyright">
-        © <a href="arquivos/Espro_250610_104314.PDF" download>2025 TransformAção</a> — Todos os direitos reservados.
-      </p>
+      <div class="footer-coluna">
+        <h4>Use cases</h4>
+        <ul>
+          <li><a href="#">UI design</a></li>
+          <li><a href="#">UX design</a></li>
+          <li><a href="#">Prototyping</a></li>
+        </ul>
+      </div>
+      <div class="footer-coluna">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#">Design features</a></li>
+          <li><a href="#">Prototyping features</a></li>
+          <li><a href="#">Design systems</a></li>
+        </ul>
+      </div>
+      <div class="footer-coluna">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Best practices</a></li>
+          <li><a href="#">Developers</a></li>
+        </ul>
+      </div>
     </div>
   </footer>
 
-  <div id="modalOrganograma" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="fecharOrganograma()">&times;</span>
-      <div class="img-container">
-        <img id="organogramaImg" src="img/organograma.png" alt="Organograma">
-        <div id="lupa"></div>
-      </div>
-    </div>
-  </div>
-
-  <div id="modalJogo" class="modal modal-jogo" aria-hidden="true">
-    <div class="modal-game-content">
-      <span class="close" id="fecharJogo">&times;</span>
-      <h3>Mini Game: Jovem Aprendiz</h3>
-      <canvas id="gameCanvas" width="480" height="300"></canvas>
-      <div class="controles-celular">
-        <button data-dir="up">⬆</button>
-        <button data-dir="left">⬅</button>
-        <button data-dir="down">⬇</button>
-        <button data-dir="right">➡</button>
-      </div>
-      <p id="placar">Papéis: 0</p>
-      <button id="btnPausar" type="button">Pausar</button>
-      <p class="game-hint">Use as setas do teclado para mover. Pegue todos os papéis!</p>
-    </div>
-  </div>
-
+  <div id="modalOrganograma" class="modal"><div class="modal-content"><span class="close" onclick="fecharOrganograma()">&times;</span><div class="img-container"><img id="organogramaImg" src="img/organograma.png" alt="Organograma"><div id="lupa"></div></div></div></div>
+  <div id="modalJogo" class="modal modal-jogo" aria-hidden="true"><div class="modal-game-content"><span class="close" id="fecharJogo">&times;</span><h3>Mini Game: Jovem Aprendiz</h3><canvas id="gameCanvas" width="480" height="300"></canvas><p id="placar">Papéis: 0</p><button id="btnPausar" type="button">Pausar</button><p class="game-hint">Use as setas para mover.</p></div></div>
   <div id="toast"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script>
-    (function(){
-      emailjs.init("WbC_taFZ5YfBWlTzg");
-    })();
+    (function(){ emailjs.init("WbC_taFZ5YfBWlTzg"); })();
   </script>
   <script src="script.js"></script>
 
