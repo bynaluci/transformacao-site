@@ -45,43 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-let posicaoCarrossel = 0;
-
-function moverCarrossel(direcao) {
-  const carrossel = document.querySelector(".carrossel");
-  const imagens = document.querySelectorAll(".carrossel img");
-  const imagemLargura = imagens[0].clientWidth;
-  const totalImagens = imagens.length;
-
-  posicaoCarrossel += direcao;
-
-  if (posicaoCarrossel < 0) {
-    posicaoCarrossel = totalImagens - 1;
-  } else if (posicaoCarrossel >= totalImagens) {
-    posicaoCarrossel = 0;
-  }
-
-  const deslocamento = -posicaoCarrossel * imagemLargura;
-  carrossel.style.transform = `translateX(${deslocamento}px)`;
-}
-// Lógica separada para o segundo carrossel
-let indiceCarrossel2 = 0;
-
-function moverCarrossel2(direcao) {
-  const carrossel = document.querySelector(".carrossel2");
-  const imagens = carrossel.querySelectorAll("img");
-
-  indiceCarrossel2 += direcao;
-
-  if (indiceCarrossel2 < 0) {
-    indiceCarrossel2 = imagens.length - 1;
-  } else if (indiceCarrossel2 >= imagens.length) {
-    indiceCarrossel2 = 0;
-  }
-
-  const deslocamento = -indiceCarrossel2 * 300; // mesma largura do carrossel
-  carrossel.style.transform = `translateX(${deslocamento}px)`;
-}
 
 document.getElementById("voluntario-form").addEventListener("submit", function(event) {
   event.preventDefault(); // impede envio padrão do formulário

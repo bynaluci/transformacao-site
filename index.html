@@ -7,11 +7,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2e7u1a8t/bI+u0+58l5m5k5w5d5e5/j1w1o5/k1k1c5" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 
-  <!-- HEADER -->
   <header class="header">
     <div class="container">
       <a href="#">
@@ -26,26 +26,22 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <img src="img/transformAcao.png" alt="TransformAção" class="hero-logo" />
+  <section class="hero-banner">
+    <img src="img/banner2.jpeg" alt="Setembro Amarelo" class="banner-img">
+  </section>
+
+  <section class="hero-content">
+    <div class="container content">
       <h1 class="hero-title">Transformando a dificuldade em alegria!</h1>
       <p class="hero-subtitle">Conecte-se a projetos que impactam vidas e fazem a diferença em nossa comunidade.</p>
       <a href="#voluntario" class="btn-primary">Seja voluntário</a>
     </div>
   </section>
 
-  <!-- BANNER -->
-  <section class="banner-campanha">
-    <img src="img/banner2.jpeg" alt="Campanha em Destaque" class="banner-img">
-  </section>
-
-  <!-- SOBRE -->
   <section class="section sobre" id="sobre">
     <h2>Sobre</h2>
     <div class="subtopicos">
-      <div class="subtopico">
+      <div class="subtopico subtopico-left">
         <h3>Quem somos?</h3>
         <p>
           Somos uma organização não governamental fundada com o intuito de transformar todo tipo de dificuldade
@@ -54,14 +50,7 @@
         <button onclick="verOrganograma()" class="link-organograma">Ver organograma</button>
       </div>
 
-      <div class="subtopico">
-        <h3>O que fazemos?</h3>
-        <p>
-          Atuamos através de projetos sociais e campanhas para levar um pouco de dignidade para aqueles que mais precisam.
-        </p>
-      </div>
-
-      <div class="subtopico">
+      <div class="subtopico subtopico-right">
         <h3>Missão, Visão e Valores</h3>
         <p>
           Nossa missão é ajudar quem precisa, fazer a diferença na vida delas, agregando um valor digno. <br />
@@ -69,25 +58,21 @@
           Nossos valores são: Solidariedade, Igualdade, Inclusão, Empatia.
         </p>
       </div>
+      
+      <div class="subtopico subtopico-left">
+        <h3>O que fazemos?</h3>
+        <p>
+          Atuamos através de projetos sociais e campanhas para levar um pouco de dignidade para aqueles que mais precisam.
+        </p>
+      </div>
     </div>
   </section>
 
-  <!-- PROJETOS -->
   <section class="section projetos" id="projetos">
     <h2>Projetos</h2>
 
-    <div class="carrossel-container">
-      <div class="carrossel-wrapper">
-        <div class="carrossel">
-          <img src="img/imagem4.png" alt="Imagem 4">
-          <img src="img/imagem1.jpeg" alt="Imagem 1">
-          <img src="img/imagem2.jpeg" alt="Imagem 2">
-          <img src="img/imagem3.jpeg" alt="Imagem 3">
-        </div>
-        <button class="seta esquerda" onclick="moverCarrossel(-1)">&#10094;</button>
-        <button class="seta direita" onclick="moverCarrossel(1)">&#10095;</button>
-      </div>
-
+    <div class="projeto-card">
+      <img src="img/imagem4.png" alt="Maio Laranja">
       <div class="descricao">
         <h3>Maio Laranja</h3>
         <p>
@@ -95,32 +80,21 @@
         </p>
       </div>
     </div>
-
-    <div class="carrossel-container reverse">
+    
+    <div class="projeto-card reverse">
+      <img src="img/agasalho1.png" alt="Campanha do Agasalho">
       <div class="descricao">
         <h3>Campanha do Agasalho</h3>
         <p>
           Durante os meses mais frios, arrecadamos agasalhos e cobertores em nossa comunidade para distribuir a pessoas em situação de vulnerabilidade. Foi uma corrente do bem que aqueceu muitos corações.
         </p>
       </div>
-
-      <div class="carrossel-wrapper">
-        <div class="carrossel carrossel2">
-          <img src="img/agasalho1.png" alt="Agasalho 1">
-          <img src="img/agasalho2.jpeg" alt="Agasalho 2">
-          <img src="img/agasalho3.png" alt="Agasalho 3">
-          <img src="img/agasalho4.png" alt="Agasalho 4">
-          <img src="img/agasalho5.png" alt="Agasalho 5">
-        </div>
-        <button class="seta esquerda" onclick="moverCarrossel2(-1)">&#10094;</button>
-        <button class="seta direita" onclick="moverCarrossel2(1)">&#10095;</button>
-      </div>
     </div>
+
   </section>
 
-  <!-- VOLUNTÁRIO -->
   <section class="section voluntario" id="voluntario">
-    <h2>Seja um voluntário</h2>
+    <h2>Seja voluntário</h2>
     <form id="voluntario-form">
       <input type="text" name="from_nome" placeholder="Seu nome" required />
       <input type="tel" name="from_numero" placeholder="Seu número" required />
@@ -129,28 +103,24 @@
     </form>
   </section>
 
-  <!-- IMPACTO -->
   <section class="section impacto" id="impacto">
     <h2>Nosso Impacto</h2>
     <p>Em breve: números e histórias das nossas ações e projetos realizados!</p>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
-    <p>
-      © <a href="arquivos/Espro_250610_104314.PDF" download style="text-decoration: none; color: inherit;">2025 TransformAção</a> — Todos os direitos reservados.
-    </p>
-    <ul class="contato-lista">
-      <li>
-        Email: <a href="mailto:turma15686@gmail.com" style="color: inherit;">turma15686@gmail.com</a>
-      </li>
-      <li>
-        Instagram: <a href="https://instagram.com/ong_transformaacao" target="_blank" style="color: inherit;">@transformacao</a>
-      </li>
-    </ul>
+    <div class="footer-container">
+      <div class="footer-social">
+        <a href="https://instagram.com/ong_transformaacao" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:turma15686@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p class="footer-copyright">
+        © <a href="arquivos/Espro_250610_104314.PDF" download>2025 TransformAção</a> — Todos os direitos reservados.
+      </p>
+    </div>
   </footer>
 
-  <!-- MODAL ORGANOGRAMA -->
   <div id="modalOrganograma" class="modal">
     <div class="modal-content">
       <span class="close" onclick="fecharOrganograma()">&times;</span>
@@ -161,7 +131,6 @@
     </div>
   </div>
 
-  <!-- MODAL JOGO -->
   <div id="modalJogo" class="modal modal-jogo" aria-hidden="true">
     <div class="modal-game-content">
       <span class="close" id="fecharJogo">&times;</span>
@@ -179,10 +148,8 @@
     </div>
   </div>
 
-  <!-- TOAST -->
   <div id="toast"></div>
 
-  <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script>
     (function(){
