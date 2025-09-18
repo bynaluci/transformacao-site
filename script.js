@@ -12,6 +12,31 @@ document.getElementById("voluntario-form").addEventListener("submit", function(e
     });
 });
 
+const modal = document.getElementById("modalOrganograma");
+const btn = document.getElementById("abrirOrganogramaBtn");
+const span = document.getElementsByClassName("close-button")[0];
+const pdfViewer = document.getElementById("pdfViewer");
+
+const caminhoDoPDF = 'organograma.PDF';
+
+btn.onclick = function(event) {
+  event.preventDefault(); // Impede que o link '#' mude a URL
+  pdfViewer.src = caminhoDoPDF; // Carrega o PDF no iframe
+  modal.style.display = "block"; // Mostra a janela modal
+}
+
+span.onclick = function() {
+  modal.style.display = "none"; // Esconde a janela modal
+  pdfViewer.src = ""; // Limpa o src para parar de carregar o PDF
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none"; // Esconde a janela modal
+    pdfViewer.src = ""; // Limpa o src
+  }
+}
+
 // ---- JOGO ----
 document.getElementById('btnJogo').addEventListener('click', abrirJogo);
 document.getElementById('btnJogoImpacto').addEventListener('click', abrirJogo); // NOVO: Botão Jogue Aqui no impacto

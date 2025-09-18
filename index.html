@@ -39,16 +39,27 @@
   </section>
 
   <section class="section sobre" id="sobre">
-    <h2>Sobre</h2>
-    <div class="subtopicos">
-      <div class="subtopico subtopico-left">
-        <h3>Quem somos?</h3>
-        <p>
-          Somos uma organização não governamental fundada com o intuito de transformar todo tipo de dificuldade
-          em alegria para aqueles que mais precisam e necessitam de momentos felizes.
-        </p>
-        <button onclick="verOrganograma()" class="link-organograma">Ver organograma</button>
-      </div>
+  <h2>Sobre</h2>
+  <div class="subtopicos">
+    <div class="subtopico subtopico-left">
+      <h3>Quem somos?</h3>
+      <p>
+        Somos uma organização não governamental fundada com o intuito de transformar todo tipo de dificuldade
+        em alegria para aqueles que mais precisam e necessitam de momentos felizes.
+      </p>
+      
+      <a href="#" id="abrirOrganogramaBtn" class="button-organograma">Veja nosso organograma!</a>
+
+    </div>
+  </div>
+</section>
+
+<div id="modalOrganograma" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <iframe id="pdfViewer" src="" width="100%" height="100%" style="border:none;"></iframe>
+  </div>
+</div>
 
       <div class="subtopico subtopico-right">
         <h3>Missão, Visão e Valores</h3>
@@ -164,6 +175,7 @@
     })();
   </script>
   <script src="script.js"></script>
+
 
 </body>
 </html>
