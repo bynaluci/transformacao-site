@@ -193,9 +193,14 @@ body {
 
 /* --- Estilo do Botão --- */
 .button-organograma {
-  display: inline-block;
+  /* --- NOVO CÓDIGO PARA ALINHAMENTO PERFEITO --- */
+  display: inline-flex;   /* Usamos flexbox para alinhar */
+  align-items: center;     /* Alinha o texto verticalmente (no centro) */
+  justify-content: center; /* Alinha o texto horizontalmente (no centro) */
+
+  /* --- ESTILOS ANTERIORES (com a margem que adicionamos) --- */
+  margin-top: 20px;
   padding: 0.75rem 1.25rem;
-  margin-top: 30px;
   border-radius: 10rem;
   color: #fff;
   text-transform: uppercase;
@@ -205,10 +210,12 @@ body {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  text-decoration: none; /* Garante que não haja sublinhado */
+  text-decoration: none;
   font-weight: bold;
+  text-align: center; /* Garante o alinhamento do texto */
 }
 
+/* O restante do seu CSS (:after, :before, :hover) pode continuar igual */
 .button-organograma:after {
   content: '';
   position: absolute;
@@ -216,7 +223,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #0cf; /* Cor principal do botão */
+  background-color: #0cf;
   border-radius: 10rem;
   z-index: -2;
 }
@@ -228,7 +235,7 @@ body {
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: #008fb3; /* Cor mais escura para o efeito hover */
+  background-color: #008fb3;
   transition: all .3s;
   border-radius: 10rem;
   z-index: -1;
@@ -241,7 +248,6 @@ body {
 .button-organograma:hover:before {
   width: 100%;
 }
-
 
 /* --- Estilo da Janela Modal --- */
 .modal {
