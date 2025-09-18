@@ -27,6 +27,22 @@ document.addEventListener("DOMContentLoaded", () => {
   img.addEventListener("mouseleave", () => { lupa.style.display = "none"; });
 });
 
+
+ // ---- MODAL ORGANOGRAMA ----
+function verOrganograma() {
+  document.getElementById("modalOrganograma").style.display = "flex";
+}
+// ESTA É A FUNÇÃO QUE O "X" USA
+function fecharOrganograma() {
+  document.getElementById("modalOrganograma").style.display = "none";
+}
+
+// ---- LÓGICA DA LUPA (se estiver usando) ----
+document.addEventListener("DOMContentLoaded", () => {
+  const img = document.getElementById("organogramaImg");
+  // ... resto do código da lupa ...
+});
+
 // ---- CARROSSEL ----
 let posicaoCarrossel = 0;
 function moverCarrossel(direcao) {

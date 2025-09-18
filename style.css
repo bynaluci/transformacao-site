@@ -101,25 +101,37 @@ main { display: block; }
 .impacto p { margin-bottom: 20px; }
 
 /* Footer */
-.footer { background-color: #f1f1f1; padding: 40px 20px; }
+.footer { background-color: #292828; padding: 40px 20px; }
 .footer-container { max-width: 1100px; margin: auto; }
 .footer-info { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
 .logo-img-footer { height: 50px; }
 .footer-details a { color: var(--cinza-texto); text-decoration: none; }
 .footer-social-new a { font-size: 24px; color: var(--cinza-escuro); margin-left: 15px; }
 
+
 /* Modais e Toast */
 .modal { display: none; position: fixed; z-index: 1001; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8); align-items: center; justify-content: center; }
 .modal-content { position: relative; padding: 20px; background: #fff; border-radius: 8px; }
-.close, .close-button { position: absolute; top: 10px; right: 20px; font-size: 32px; font-weight: bold; cursor: pointer; color: #555; }
 .img-container { position: relative; }
 #organogramaImg { max-width: 90vw; max-height: 80vh; height: auto; display: block; border-radius: 5px; }
-#lupa { position: absolute; display: none; width: 150px; height: 150px; border: 3px solid var(--azul-claro); border-radius: 50%; background-repeat: no-repeat; pointer-events: none; box-shadow: 0 0 10px rgba(0,0,0,0.5); z-index: 10; }
-.modal-jogo.aberto { display: flex; }
-.modal-game-content { text-align: center; background: white; padding: 25px; border-radius: 12px; max-width: 520px; width: 90%; position: relative; }
-#gameCanvas { width: 100%; border: 2px solid #ddd; background-color: #fdfdfd; display: block; margin: 15px 0; }
-#toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: #333; color: white; padding: 12px 22px; border-radius: 8px; opacity: 0; pointer-events: none; transition: opacity 0.3s ease-in-out; z-index: 1002; }
-#toast.visivel { opacity: 1; }
+
+/* ======================================================= */
+/* ====== ESTILO CORRIGIDO PARA O "X" DE FECHAR ====== */
+/* ======================================================= */
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  font-size: 35px;
+  font-weight: bold;
+  color: #333; /* Cor escura para garantir visibilidade */
+  cursor: pointer;
+  z-index: 10; /* Para ficar na frente da imagem */
+  transition: color 0.3s;
+}
+.close-button:hover {
+  color: #ff0000; /* Vermelho ao passar o mouse */
+}
 
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 992px) {
