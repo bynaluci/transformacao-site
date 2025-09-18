@@ -85,8 +85,8 @@ body {
 
 /* HERO BANNER */
 .hero-banner {
-  margin: 2000;
-  padding: 500;
+  margin: 0;
+  padding: 0;
 }
 .banner-img {
   width: 100%;
