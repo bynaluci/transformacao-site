@@ -1,8 +1,9 @@
 :root {
   --amarelo: #FFD700;
   --azul-claro: #007BFF;
+  --azul-escuro-hover: #0056b3; /* Cor para o hover dos botões */
   --cinza-escuro: #333333;
-  --cinza-header: #444; /* Cinza para o header */
+  --cinza-header: #444; 
   --cinza-texto: #555555;
   --cinza-claro: #f8f9fa;
   --branco: #FFFFFF;
@@ -14,61 +15,54 @@
 html { scroll-behavior: smooth; }
 body { font-family: 'Poppins', sans-serif; color: var(--cinza-texto); background-color: var(--branco); line-height: 1.7; }
 .container { width: 90%; max-width: 1100px; margin: 0 auto; }
-main { display: block; } /* Garante consistência em navegadores antigos */
+main { display: block; } 
 
 /* HEADER */
-.header {
-  background-color: var(--cinza-header);
-  padding: 12px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.logo-img {
-  height: 40px;
-}
-.nav {
-  display: flex;
-  align-items: center;
-}
-.menu-links {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-.nav a, .nav-button-jogo {
-  color: var(--branco);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
-  transition: color 0.3s;
-}
-.nav a:hover, .nav-button-jogo:hover {
-  color: var(--amarelo);
-}
-.nav-button-jogo {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-family: 'Poppins', sans-serif;
-}
-.btn-mobile {
-  display: none; /* Escondido no desktop */
-}
+.header { background-color: var(--cinza-header); padding: 12px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo-img { height: 40px; }
+.nav { display: flex; align-items: center; }
+.menu-links { display: flex; align-items: center; gap: 30px; }
+.nav a, .nav-button-jogo { color: var(--branco); text-decoration: none; font-weight: 500; font-size: 16px; transition: color 0.3s; }
+.nav a:hover, .nav-button-jogo:hover { color: var(--amarelo); }
+.nav-button-jogo { background: none; border: none; cursor: pointer; font-family: 'Poppins', sans-serif; }
+.btn-mobile { display: none; }
 
 /* Seção Hero (Banner + Conteúdo) */
 .hero-banner .banner-img { width: 100%; display: block; }
 .hero-content { padding: 50px 20px; text-align: center; }
 .hero-title { font-size: 36px; font-weight: 700; margin-bottom: 20px; color: var(--cinza-escuro); }
 .hero-subtitle { font-size: 18px; margin-bottom: 30px; }
-.btn-primary { display: inline-block; padding: 12px 30px; border-radius: 5px; background-color: var(--azul-claro); color: var(--branco); text-decoration: none; font-weight: 500; font-size: 16px; border: none; cursor: pointer; transition: background-color 0.3s, transform 0.2s; }
-.btn-primary:hover { background-color: #0056b3; transform: translateY(-2px); }
+
+/* ======================================================= */
+/* ====== BLOCO DE BOTÕES CORRIGIDO E UNIFICADO ====== */
+/* ======================================================= */
+.btn-primary,
+.voluntario form button,
+.button-organograma,
+.btn-jogo-impacto {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 5px;
+  background-color: var(--azul-claro);
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover,
+.voluntario form button:hover,
+.button-organograma:hover,
+.btn-jogo-impacto:hover {
+  background-color: var(--azul-escuro-hover);
+  transform: translateY(-2px);
+}
+.button-organograma { margin-top: 15px; }
+/* ======================================================= */
 
 /* Estilos Gerais de Seção */
 .section { padding: 80px 20px; }
@@ -78,8 +72,6 @@ main { display: block; } /* Garante consistência em navegadores antigos */
 .sobre .subtopicos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: left; }
 .sobre .subtopico h3 { font-size: 18px; font-weight: 600; margin-bottom: 15px; color: var(--cinza-escuro); }
 .sobre .subtopico p { font-size: 15px; text-align: justify; }
-.button-organograma { background: none; border: 1px solid var(--azul-claro); color: var(--azul-claro); padding: 8px 16px; border-radius: 5px; cursor: pointer; text-decoration: none; display: inline-block; margin-top: 15px; transition: background-color 0.3s, color 0.3s; }
-.button-organograma:hover { background-color: var(--azul-claro); color: var(--branco); }
 
 /* Seção Projetos */
 .projetos { background-color: var(--cinza-claro); }
@@ -101,14 +93,12 @@ main { display: block; } /* Garante consistência em navegadores antigos */
 
 /* Seção Voluntário */
 .voluntario form { display: flex; flex-direction: column; gap: 20px; max-width: 500px; width: 100%; margin: 0 auto; }
-.voluntario input, .voluntario button { padding: 15px; font-size: 16px; border: 1px solid var(--borda-cinza); border-radius: 5px; font-family: 'Poppins', sans-serif; }
-.voluntario button { background-color: var(--azul-claro); color: var(--branco); cursor: pointer; }
+.voluntario input { padding: 15px; font-size: 16px; border: 1px solid var(--borda-cinza); border-radius: 5px; font-family: 'Poppins', sans-serif; }
 .voluntario input:focus { outline: none; border-color: var(--azul-claro); box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); }
 
 /* Seção Impacto */
 .impacto { text-align: center; }
 .impacto p { margin-bottom: 20px; }
-.btn-jogo-impacto { /* Estilo para o botão "Jogue aqui" se desejar */ }
 
 /* Footer */
 .footer { background-color: #f1f1f1; padding: 40px 20px; }
@@ -137,7 +127,6 @@ main { display: block; } /* Garante consistência em navegadores antigos */
   .projeto-item, .projeto-item.reverse { flex-direction: column; text-align: center; }
   .projeto-desc p { text-align: center; }
 }
-
 @media (max-width: 768px) {
   .header { padding: 8px 0; }
   .logo-img { height: 35px; }
@@ -152,7 +141,6 @@ main { display: block; } /* Garante consistência em navegadores antigos */
   .header.ativo .menu-links { display: flex; }
   .menu-links a, .menu-links .nav-button-jogo { padding: 15px 0; font-size: 18px; }
 }
-
 @media (max-width: 576px) {
   .hero-title { font-size: 28px; }
   .section { padding: 60px 15px; }
