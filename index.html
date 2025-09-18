@@ -17,112 +17,122 @@
       <a href="#">
         <img src="img/logo.png" alt="TransformAção" class="logo-img" />
       </a>
+      <button id="btn-mobile" class="btn-mobile">
+        <span class="hamburger"></span>
+      </button>
       <nav class="nav">
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#impacto">Impacto</a>
-        <button id="btnJogo" class="btn-jogo" type="button">Jogar</button>
+        <div id="menu-links" class="menu-links">
+          <a href="#sobre">Sobre</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#impacto">Impacto</a>
+          <button id="btnJogo" class="nav-button-jogo" type="button">Jogar</button>
+        </div>
       </nav>
     </div>
   </header>
 
-  <section class="hero-banner">
-    <img src="img/banner2.png" alt="Setembro Amarelo" class="banner-img">
-  </section>
+  <main>
+    <section class="hero-banner">
+      <img src="img/banner2.png" alt="Setembro Amarelo" class="banner-img">
+    </section>
 
-  <section class="hero-content">
-    <div class="container content">
-      <h1 class="hero-title">Transformando a dificuldade em alegria!</h1>
-      <p class="hero-subtitle">Conecte-se a projetos que impactam vidas e fazem a diferença em nossa comunidade.</p>
-      <a href="#voluntario" class="btn-primary">Seja voluntário</a>
-    </div>
-  </section>
-
-  <section class="section sobre" id="sobre">
-  <h2>Sobre</h2>
-  <div class="subtopicos">
-    <div class="subtopico subtopico-left">
-      <h3>Quem somos?</h3>
-      <p>
-        Somos uma organização não governamental fundada com o intuito de transformar todo tipo de dificuldade
-        em alegria para aqueles que mais precisam e necessitam de momentos felizes.
-      </p>
-      
-      <a href="#" id="abrirOrganogramaBtn" class="button-organograma">Veja nosso organograma!</a>
-
-    </div>
-  </div>
-</section>
-
-<div id="modalOrganograma" class="modal">
-  <div class="modal-content">
-    <span class="close-button">&times;</span>
-    <iframe id="pdfViewer" src="" width="100%" height="100%" style="border:none;"></iframe>
-  </div>
-</div>
-
-      <div class="subtopico subtopico-right">
-        <h3>Missão, Visão e Valores</h3>
-        <p>
-          Nossa missão é ajudar quem precisa, fazer a diferença na vida delas, agregando um valor digno. <br />
-          Nossa visão é se tornar referência em solidariedade mantendo sempre nosso compromisso com a igualdade. <br />
-          Nossos valores são: Solidariedade, Igualdade, Inclusão, Empatia.
-        </p>
+    <section class="hero-content">
+      <div class="container content">
+        <h1 class="hero-title">Transformando a dificuldade em alegria!</h1>
+        <p class="hero-subtitle">Conecte-se a projetos que impactam vidas e fazem a diferença em nossa comunidade.</p>
+        <a href="#voluntario" class="btn-primary">Seja voluntário</a>
       </div>
-      
-      <div class="subtopico subtopico-left">
-        <h3>O que fazemos?</h3>
-        <p>
-          Atuamos através de projetos sociais e campanhas para levar um pouco de dignidade para aqueles que mais precisam.
-        </p>
+    </section>
+
+    <section class="section sobre" id="sobre">
+      <h2>Sobre</h2>
+      <div class="subtopicos">
+        <div class="subtopico">
+          <h3>Quem somos?</h3>
+          <p>
+            Somos uma organização não governamental fundada com o intuito de transformar todo tipo de dificuldade
+            em alegria para aqueles que mais precisam e necessitam de momentos felizes.
+          </p>
+          <button onclick="verOrganograma()" class="button-organograma">Veja nosso organograma!</button>
+        </div>
+        
+        <div class="subtopico">
+          <h3>O que fazemos?</h3>
+          <p>
+            Atuamos através de projetos sociais e campanhas para levar um pouco de dignidade para aqueles que mais precisam.
+          </p>
+        </div>
+
+        <div class="subtopico">
+          <h3>Missão, Visão e Valores</h3>
+          <p>
+            Nossa missão é ajudar quem precisa, fazer a diferença na vida delas, agregando um valor digno. <br />
+            Nossa visão é se tornar referência em solidariedade mantendo sempre nosso compromisso com a igualdade. <br />
+            Nossos valores são: Solidariedade, Igualdade, Inclusão, Empatia.
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section projetos" id="projetos">
-    <h2>Projetos</h2>
+    <section class="section projetos" id="projetos">
+      <h2>Projetos</h2>
 
-    <div class="projeto-card">
-      <img src="img/imagem4.png" alt="Maio Laranja">
-      <div class="descricao">
-        <h3>Maio Laranja</h3>
-        <p>
-          Esta campanha foi desenvolvida para conscientizar a todos sobre o maio laranja. Fizemos uma animação e uma atividade com nossas crianças, além de conversar e refletir sobre essa causa.
-        </p>
+      <div class="projeto-item">
+        <div class="carrossel-wrapper">
+          <div class="carrossel">
+            <img src="img/imagem4.png" alt="Imagem 4">
+            <img src="img/imagem1.jpeg" alt="Imagem 1">
+            <img src="img/imagem2.jpeg" alt="Imagem 2">
+            <img src="img/imagem3.jpeg" alt="Imagem 3">
+          </div>
+          <button class="seta esquerda" onclick="moverCarrossel(-1)">&#10094;</button>
+          <button class="seta direita" onclick="moverCarrossel(1)">&#10095;</button>
+        </div>
+        <div class="projeto-desc">
+          <h3>Maio Laranja</h3>
+          <p>
+            Esta campanha foi desenvolvida para conscientizar a todos sobre o maio laranja. Fizemos uma animação e uma atividade com nossas crianças, além de conversar e refletir sobre essa causa.
+          </p>
+        </div>
       </div>
-      <button class="seta esquerda" onclick="moverCarrossel(-1)">&#10094;</button>
-        <button class="seta direita" onclick="moverCarrossel(1)">&#10095;</button>
-    </div>
-    
-    <div class="projeto-card reverse">
-      <img src="img/agasalho1.png" alt="Campanha do Agasalho">
-      <div class="descricao">
-        <h3>Campanha do Agasalho</h3>
-        <p>
-          Durante os meses mais frios, arrecadamos agasalhos e cobertores em nossa comunidade para distribuir a pessoas em situação de vulnerabilidade. Foi uma corrente do bem que aqueceu muitos corações.
-        </p>
+
+      <div class="projeto-item reverse">
+        <div class="carrossel-wrapper">
+          <div class="carrossel carrossel2">
+            <img src="img/agasalho1.png" alt="Agasalho 1">
+            <img src="img/agasalho2.jpeg" alt="Agasalho 2">
+            <img src="img/agasalho3.png" alt="Agasalho 3">
+            <img src="img/agasalho4.png" alt="Agasalho 4">
+            <img src="img/agasalho5.png" alt="Agasalho 5">
+          </div>
+          <button class="seta esquerda" onclick="moverCarrossel2(-1)">&#10094;</button>
+          <button class="seta direita" onclick="moverCarrossel2(1)">&#10095;</button>
+        </div>
+        <div class="projeto-desc">
+          <h3>Campanha do Agasalho</h3>
+          <p>
+            Durante os meses mais frios, arrecadamos agasalhos e cobertores em nossa comunidade para distribuir a pessoas em situação de vulnerabilidade. Foi uma corrente do bem que aqueceu muitos corações.
+          </p>
+        </div>
       </div>
-      <button class="seta esquerda" onclick="moverCarrossel(-1)">&#10094;</button>
-        <button class="seta direita" onclick="moverCarrossel(1)">&#10095;</button>
-    </div>
+    </section>
 
-  </section>
+    <section class="section voluntario" id="voluntario">
+      <h2>Seja voluntário</h2>
+      <form id="voluntario-form">
+        <input type="text" name="from_nome" placeholder="Seu nome" required />
+        <input type="tel" name="from_numero" placeholder="Seu número" required />
+        <input type="email" name="from_email" placeholder="Seu e-mail" required />
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
 
-  <section class="section voluntario" id="voluntario">
-    <h2>Seja voluntário</h2>
-    <form id="voluntario-form">
-      <input type="text" name="from_nome" placeholder="Seu nome" required />
-      <input type="tel" name="from_numero" placeholder="Seu número" required />
-      <input type="email" name="from_email" placeholder="Seu e-mail" required />
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
-
-  <section class="section impacto" id="impacto">
-    <h2>Nosso Impacto</h2>
-    <p>Em breve: números e histórias das nossas ações e projetos realizados!</p>
-    <button id="btnJogoImpacto" class="btn-jogo-impacto" type="button">Jogue aqui!</button>
-  </section>
+    <section class="section impacto" id="impacto">
+      <h2>Nosso Impacto</h2>
+      <p>Em breve: números e histórias das nossas ações e projetos realizados!</p>
+      <button id="btnJogoImpacto" class="btn-jogo-impacto" type="button">Jogue aqui!</button>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="footer-container">
@@ -179,7 +189,6 @@
     })();
   </script>
   <script src="script.js"></script>
-
 
 </body>
 </html>
