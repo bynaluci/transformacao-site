@@ -66,6 +66,8 @@
           <div class="carrossel">
             <img src="img/imagem4.png" alt="Imagem 4">
             <img src="img/imagem1.jpeg" alt="Imagem 1">
+            <img src="img/imagem2.jpeg" alt="Imagem 2">
+            <img src="img/imagem3.jpeg" alt="Imagem 3">
           </div>
           <button class="seta esquerda" onclick="moverCarrossel(-1)">&#10094;</button>
           <button class="seta direita" onclick="moverCarrossel(1)">&#10095;</button>
@@ -81,6 +83,9 @@
           <div class="carrossel carrossel2">
             <img src="img/agasalho1.png" alt="Agasalho 1">
             <img src="img/agasalho2.jpeg" alt="Agasalho 2">
+            <img src="img/agasalho3.png" alt="Agasalho 3">
+            <img src="img/agasalho4.png" alt="Agasalho 4">
+            <img src="img/agasalho5.png" alt="Agasalho 5">
           </div>
           <button class="seta esquerda" onclick="moverCarrossel2(-1)">&#10094;</button>
           <button class="seta direita" onclick="moverCarrossel2(1)">&#10095;</button>
@@ -129,6 +134,25 @@
     </div>
   </footer>
 
+<div id="modalJogo" class="modal modal-jogo aberto" aria-hidden="false">
+  <div class="modal-game-content">
+    <span class="close" id="fechar Jogo">x</span>
+    <h3>Mini Game: Jovem Aprendiz</h3>
+    <canvas id="gameCanvas" width="973" height="608">
+      <div class="controles-celular"> == $0
+<button data-dir="up">t</button>
+<button data-dir="left">-</button>
+<button data-dir="down">1</button>
+<button data-dir="right">-</button>
+</div>
+<p id="placar">Papéis: 1</p>
+<button id="btnPausar" type="button">Pausar</button>
+<p class="game-hint">Use as setas do teclado para mover. Pegue todos os
+papéis!</p>
+</div>
+</div>
+<!-- Toast -->
+ <div id="toast" class="">Bem-vinda(o)! Colete os papéis e descubra informações sobre Jovem Aprendiz.</div>
   <div id="modalOrganograma" class="modal">
     <div class="modal-content">
       <span class="close-button" onclick="fecharOrganograma()">&times;</span>
